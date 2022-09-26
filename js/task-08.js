@@ -45,16 +45,14 @@ const divColor = () =>
 //Функция генерации Div-ов
 const createBoxes = amount => {
   const divArray = [];
-  let divWidth = 30;
-  let divHeight = 30;
+  let divSize = 30;
   if (amount > 0 && amount <= 100) {
     for (let i = 0; i < amount; i += 1) {
       divArray.push(document.createElement('div'));
-      divArray[i].style.width = divWidth + 'px';
-      divWidth += 10;
-      divArray[i].style.height = divHeight + 'px';
-      divWidth += 10;
+      divArray[i].style.width = divSize + 'px';
+      divArray[i].style.height = divSize + 'px';
       divArray[i].style.backgroundColor = divColor();
+      divSize += 10;
     }
     divBoxes.append(...divArray);
   } else divBoxes.textContent = 'Число должно быть больше 0 и меньше 100';
