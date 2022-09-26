@@ -1,0 +1,18 @@
+.gallery {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-column: auto;
+  }
+ 
+  #validation-input {
+    border: 3px solid #929dff;
+  }
+  
+  #validation-input.valid {
+    border-color: #4dce52;
+  }
+  
+  #validation-input.invalid {
+    border-color: #c9382d;
+  }
