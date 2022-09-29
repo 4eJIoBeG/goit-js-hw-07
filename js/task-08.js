@@ -40,7 +40,7 @@ divControls.addEventListener('click', event => {
 
 //Генерируем рандомный цвет
 const divColor = () =>
-  '#' + Math.random().toString(16).substring(2, 8).toUpperCase();
+  '#' + (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
 
 //Функция генерации Div-ов
 const createBoxes = amount => {

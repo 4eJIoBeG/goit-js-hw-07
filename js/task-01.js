@@ -12,12 +12,12 @@
 - Категория: Животные
 - Количество элементов: 4 */
 
-const allCategories = document.querySelector('ul#categories');
+const allCategories = document.querySelector('#categories');
 console.log(`В списке ${allCategories.children.length} категории.`);
-const category = allCategories.querySelectorAll('li.item');
 
-[...category].map(currentCategory =>
+[...allCategories.children].forEach(currentCategory => {
+  const categorySize = currentCategory.querySelectorAll('li');
   console.log(
-    `- Категория: ${currentCategory.children[0].textContent}\n- Количество элементов: ${currentCategory.children[1].children.length}`,
-  ),
-);
+    `- Категория: ${currentCategory.firstElementChild.textContent}\n- Количество элементов: ${categorySize.length}`,
+  );
+});
