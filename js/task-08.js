@@ -59,8 +59,4 @@ const createBoxes = amount => {
 };
 
 //Функция удаления Div-ов из родительского
-const destroyBoxes = () => {
-  while (divBoxes.firstChild) {
-    divBoxes.removeChild(divBoxes.firstChild);
-  }
-};
+const destroyBoxes = () => divBoxes.innerHTML = '';
